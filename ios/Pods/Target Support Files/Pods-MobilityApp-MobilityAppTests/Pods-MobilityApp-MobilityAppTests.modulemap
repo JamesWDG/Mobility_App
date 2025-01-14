@@ -1,0 +1,6 @@
+module Pods_MobilityApp_MobilityAppTests {
+  umbrella header "Pods-MobilityApp-MobilityAppTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

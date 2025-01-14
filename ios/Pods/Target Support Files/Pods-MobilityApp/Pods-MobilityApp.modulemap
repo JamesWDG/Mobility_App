@@ -1,0 +1,6 @@
+module Pods_MobilityApp {
+  umbrella header "Pods-MobilityApp-umbrella.h"
+
+  export *
+  module * { export * }
+}
