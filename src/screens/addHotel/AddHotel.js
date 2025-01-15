@@ -196,7 +196,6 @@ const AddHotel = () => {
     }
   };
 
-  console.log(firstStepInfo, 'steppppp');
   return (
     <ScreenBg>
       <SafeAreaView style={{flex: 1}}>
@@ -207,7 +206,7 @@ const AddHotel = () => {
         />
 
         {/* <Container extraStyle={{height: Dimensions.get('screen').height}}> */}
-        {/* <Container
+        <Container
           extraStyle={{
             marginHorizontal: 20,
             backgroundColor: colors.c_bdc3c7,
@@ -235,7 +234,7 @@ const AddHotel = () => {
               otherStyles={{padding: 7, paddingpaddingHorizontal: 10}}
             />
           </Container>
-        </Container> */}
+        </Container>
 
         <Title
           text={steps[selectedIndex]?.label}

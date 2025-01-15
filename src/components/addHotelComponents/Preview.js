@@ -45,6 +45,19 @@ const Preview = ({steps, data, setSelectedIndex}) => {
     <ScrollViewComp contentContainerStyle={GeneralStyles.gap(24)}>
       <Container>
         <PreviewEditComp
+          title={stepsData[7]?.label}
+          setSteps={() => setSelectedIndex(7)}
+        />
+        <Container extraStyle={styles.coverContainer}>
+          {data?.images?.length > 0 && (
+            <Container extraStyle={styles.bannerContainer}>
+              <BannerComp data={data?.images} borderRadius={20} />
+            </Container>
+          )}
+        </Container>
+      </Container>
+      <Container>
+        <PreviewEditComp
           title={stepsData[0]?.label}
           setSteps={() => setSelectedIndex(0)}
         />
@@ -406,19 +419,6 @@ const Preview = ({steps, data, setSelectedIndex}) => {
           <Icons name="percentage" />
           {/* </Container> */}
         </TouchableContainer>
-      </Container>
-      <Container>
-        <PreviewEditComp
-          title={stepsData[7]?.label}
-          setSteps={() => setSelectedIndex(7)}
-        />
-        <Container extraStyle={styles.coverContainer}>
-          {data?.images?.length > 0 && (
-            <Container extraStyle={styles.bannerContainer}>
-              <BannerComp data={data?.images} borderRadius={20} />
-            </Container>
-          )}
-        </Container>
       </Container>
     </ScrollViewComp>
   );

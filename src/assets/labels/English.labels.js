@@ -13,6 +13,13 @@ const labels = {
   anySpecifixFeaturesNotListed:
     'Any specific features not listed here? Please tell us below :',
   disabilityFeatures: 'Disability Features',
+  pricingPerDay: 'Pricing per day',
+  rentPerDay: 'Rent per day',
+  hoursAllowedPerDay: 'Hours Allowed per day',
+  additionalHoursCharge: 'Additionl hours charge',
+  allowedMilesPerDay: 'Allowed miles per day',
+  additionalMilesCharge: 'Additional miles charge',
+  guestPriceBeforeTaxesPerDay: 'Guest price before taxes Per Day',
   specialFeature: 'Special Feature',
   numOfDoors: 'Number of Doors',
   numOfSeats: 'Number of Seats',

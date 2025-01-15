@@ -42,6 +42,19 @@ export const bannersData = [
 const Preview = ({steps, data, setSelectedIndex}) => {
   return (
     <ScrollViewComp contentContainerStyle={GeneralStyles.gap(24)}>
+      <Container>
+        <PreviewEditComp
+          title={stepsData[6]?.label}
+          setSteps={() => setSelectedIndex(6)}
+        />
+        <Container extraStyle={styles.coverContainer}>
+          {data?.images?.length > 0 && (
+            <Container extraStyle={styles.bannerContainer}>
+              <BannerComp data={data?.images} />
+            </Container>
+          )}
+        </Container>
+      </Container>
       {/* First Step */}
       <Container extraStyle={{gap: 12}}>
         <PreviewEditComp
@@ -623,20 +636,6 @@ const Preview = ({steps, data, setSelectedIndex}) => {
       </Container>
 
       {/* Seventh Step */}
-
-      <Container>
-        <PreviewEditComp
-          title={stepsData[6]?.label}
-          setSteps={() => setSelectedIndex(6)}
-        />
-        <Container extraStyle={styles.coverContainer}>
-          {data?.images?.length > 0 && (
-            <Container extraStyle={styles.bannerContainer}>
-              <BannerComp data={data?.images} />
-            </Container>
-          )}
-        </Container>
-      </Container>
     </ScrollViewComp>
   );
 };

@@ -135,8 +135,9 @@ const UploadImage = ({
         {multiple && LocalImages ? (
           <ScrollViewComp
             horizontal={true}
+            showsHorizontalScrollIndicator={true}
             contentContainerStyle={{flexGrow: 1, gap: 20, marginTop: 20}}
-            style={{flex: 1, minHeight: 200}}>
+            style={{flex: 1, minHeight: 140}}>
             {LocalImages?.map((ele, index) => {
               return (
                 <Container>

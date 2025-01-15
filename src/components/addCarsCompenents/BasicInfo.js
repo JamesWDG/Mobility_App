@@ -18,7 +18,6 @@ const BasicInfo = ({isState = {}, setIsState = () => {}}) => {
   const [openStartPicker, setOpenStartPicker] = useState(false);
   const [endTimePicker, setEndTimePicker] = useState(false);
 
-  console.log(isState, 'statatatatattata');
   return (
     <Container extraStyle={{flex: 1}}>
       <ScrollViewComp

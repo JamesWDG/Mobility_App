@@ -47,49 +47,49 @@ const Pricing = ({isState = {}, setIsState = () => {}}) => {
       </Container>
       <Container extraStyle={{gap: 15, marginVertical: 15, marginTop: 20}}>
         <Input
-          title={labels?.enterNumberOfDoors}
+          title={labels?.hoursAllowedPerDay}
           marginLeft={8}
-          placeholder={labels.enterNumberOfDoors}
-          value={isState.numberOfDoors}
+          placeholder={labels.hoursAllowedPerDay}
+          value={isState.hoursAllowedPerDay}
           keyboardType={'number-pad'}
           onChangeText={t =>
-            setIsState(prevState => ({...prevState, numberOfDoors: t}))
+            setIsState(prevState => ({...prevState, hoursAllowedPerDay: t}))
           }
           marginVertical={0}
           //   otherStyles={styles.inputStyles}
         />
         <Input
-          title={labels?.enterNumberOfSeats}
+          title={labels?.additionalHoursCharge}
           marginLeft={8}
-          placeholder={labels.enterNumberOfSeats}
-          value={isState.numberOfSeats}
+          placeholder={labels.additionalHoursCharge}
+          value={isState.additionalHoursCharge}
           keyboardType={'number-pad'}
           onChangeText={t =>
-            setIsState(prevState => ({...prevState, numberOfSeats: t}))
+            setIsState(prevState => ({...prevState, additionalHoursCharge: t}))
           }
           marginVertical={0}
           //   otherStyles={styles.inputStyles}
         />
         <Input
-          title={labels?.enterNumberOfSeats}
+          title={labels?.allowedMilesPerDay}
           marginLeft={8}
-          placeholder={labels.enterNumberOfSeats}
-          value={isState.numberOfSeats}
+          placeholder={labels.allowedMilesPerDay}
+          value={isState.allowedMilesPerDay}
           keyboardType={'number-pad'}
           onChangeText={t =>
-            setIsState(prevState => ({...prevState, numberOfSeats: t}))
+            setIsState(prevState => ({...prevState, allowedMilesPerDay: t}))
           }
           marginVertical={0}
           //   otherStyles={styles.inputStyles}
         />
         <Input
-          title={labels?.enterNumberOfSeats}
+          title={labels?.additionalMilesCharge}
           marginLeft={8}
-          placeholder={labels.enterNumberOfSeats}
-          value={isState.numberOfSeats}
+          placeholder={labels.additionalMilesCharge}
+          value={isState.additionalMilesCharge}
           keyboardType={'number-pad'}
           onChangeText={t =>
-            setIsState(prevState => ({...prevState, numberOfSeats: t}))
+            setIsState(prevState => ({...prevState, additionalMilesCharge: t}))
           }
           marginVertical={0}
           //   otherStyles={styles.inputStyles}

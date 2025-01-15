@@ -139,8 +139,8 @@ const Utility = {
       Number(payload?.numberOfSeats),
       'nubebveb',
     );
-    return !payload.vehicleType
-      ? showToast(labels.vehicleType, 'error')
+    return !payload.vehicleType.length
+      ? showToast(labels.vehicleTypeIsRequired, 'error')
       : !payload?.numberOfDoors
       ? showToast(labels.numberOfDoorsIsRequired, 'error')
       : Number(payload?.numberOfDoors) > 10

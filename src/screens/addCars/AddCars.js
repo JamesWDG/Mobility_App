@@ -30,6 +30,7 @@ import CustomModal from '../../components/customModal';
 import Agreements from '../../components/addHotelComponents/Agreements';
 import Featuress from '../../components/addCarsCompenents/Features';
 import Pricing from '../../components/addCarsCompenents/Pricing';
+import colors from '../../config/Colors';
 const items = ['Budget', 'Standard', 'Luxury'];
 
 const AddCars = () => {
@@ -201,7 +202,6 @@ const AddCars = () => {
     }
   };
 
-  console.log(isState, 'steppppp');
   return (
     <ScreenBg>
       <SafeAreaView style={{flex: 1}}>
@@ -210,6 +210,36 @@ const AddCars = () => {
           title={labels.createNewListing}
           rightImage={true}
         />
+
+        <Container
+          extraStyle={{
+            marginHorizontal: 20,
+            backgroundColor: colors.c_bdc3c7,
+            borderRadius: 8,
+            marginVertical: 20,
+          }}>
+          <Container
+            extraStyle={{
+              height: 30,
+              backgroundColor: colors.c_7939FE,
+              width: `${(selectedIndex / 8) * 100}%`,
+              borderRadius: 8,
+              //   alignItems: 'center',
+              justifyContent: 'center',
+            }}>
+            <Title
+              //   text={`${((selectedIndex + 1) / 8) * 100}%`}
+              text={
+                (selectedIndex / 8) * 100 > 0
+                  ? `${(selectedIndex / 8) * 100}%`
+                  : ''
+              }
+              fontSize={12}
+              color="white"
+              otherStyles={{padding: 7, paddingpaddingHorizontal: 10}}
+            />
+          </Container>
+        </Container>
 
         <KeyboardAvoidingView
           contentContainerStyle={{flex: 1}}
@@ -226,7 +256,7 @@ const AddCars = () => {
               ref={tabRef}
               renderItem={stepsRenderItem}
               horizontal={true}
-              showsHorizontalScrollIndicator={false}
+              showsHorizontalScrollIndicator={true}
               keyExtractor={(item, index) => index}
               contentContainerStyle={styles.stepsContentContainer}
               onScrollToIndexFailed={info => onScrollToIndexFailed(info)}
